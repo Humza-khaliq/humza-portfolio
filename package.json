@@ -1,0 +1,8 @@
+{
+  "name": "humza-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes serve \"vcard-personal-portfolio\" -p 3456",
+    "start": "npm run dev"
+  }
+}

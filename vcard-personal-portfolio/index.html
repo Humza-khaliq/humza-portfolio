@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humza Khaliq — Portfolio</title>
+  <meta name="description" content="Humza Khaliq — CS + Business student at UMass Amherst. Web development, data science, and full-stack projects.">
+
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <script src="./assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/themes.css">
+  <link rel="stylesheet" href="./assets/css/theme-toggle.css">
+  <link rel="stylesheet" href="./assets/css/geometric-bg.css">
+  <link rel="stylesheet" href="./assets/css/cursor-spotlight.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="geo-bg" aria-hidden="true">
+    <div class="geo-bg__wash"></div>
+    <div class="geo-bg__shapes">
+      <div class="geo-shape geo-shape--indigo"></div>
+      <div class="geo-shape geo-shape--rose"></div>
+      <div class="geo-shape geo-shape--violet"></div>
+      <div class="geo-shape geo-shape--amber"></div>
+      <div class="geo-shape geo-shape--cyan"></div>
+    </div>
+    <div class="geo-bg__vignette"></div>
+
+    <div class="theme-toggle theme-toggle--bg" data-theme-toggle role="radiogroup" aria-label="Color theme">
+      <span class="theme-toggle__indicator" data-theme-indicator aria-hidden="true"></span>
+      <button type="button" class="theme-toggle__btn" data-theme-value="system" role="radio" aria-checked="true" aria-label="System theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </button>
+      <button type="button" class="theme-toggle__btn" data-theme-value="light" role="radio" aria-checked="false" aria-label="Light theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button type="button" class="theme-toggle__btn" data-theme-value="dark" role="radio" aria-checked="false" aria-label="Dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.5 5.5 0 0 1-4.4 2.26 5.5 5.5 0 0 1-5.86-5.86 5.5 5.5 0 0 1 2.26-4.4A9 9 0 0 0 12 3z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="cursor-spotlight" data-cursor-spotlight aria-hidden="true">
+    <div class="cursor-spotlight__glow"></div>
+    <div class="cursor-spotlight__glow cursor-spotlight__glow--core"></div>
+  </div>
+
+  <main>
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Humza Khaliq" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Humza Khaliq">Humza Khaliq</h1>
+          <p class="title">Software QA Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:humza.khaliq03@gmail.com" class="contact-link">humza.khaliq03@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Resume</p>
+              <a href="./assets/resume.pdf" class="contact-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Graduation</p>
+              <time datetime="2026-05">May 2026</time>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Amherst, MA</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/humza-khaliq/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/Humza-khaliq" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <div class="main-content">
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a CS and Business student at UMass Amherst, graduating May 2026. I build technically strong,
+            practically useful systems — from full-stack web apps to data pipelines and ML models.
+          </p>
+          <p>
+            Former national-level swimmer for Pakistan. I bring the same discipline to engineering: reliable
+            work, fast iteration, and outcomes that matter.
+          </p>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm doing</h3>
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+                <p class="service-item-text">
+                  Full-stack apps with Next.js, React, Flask, Supabase, and Tailwind — portals, booking systems, and product sites.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="Data analytics icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data &amp; analytics</h4>
+                <p class="service-item-text">
+                  EDA, sentiment analysis, dashboards, and insights — turning raw data into decisions.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="Machine learning icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Machine learning</h4>
+                <p class="service-item-text">
+                  Detection systems, predictive models, and validation against live APIs — Python, R, and YOLOv8.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="Product icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Product &amp; business</h4>
+                <p class="service-item-text">
+                  BBA in Operations &amp; Information Management — building products that solve real problems.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </article>
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">UMass Amherst</h4>
+              <span>2022 — May 2026</span>
+              <p class="timeline-text">
+                BBA Operations &amp; Information Management · BS Informatics. Business + technology — operations, data, informatics, and CS coursework.
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Website Developer — Elevate The Game</h4>
+              <span>Apr 2026 — Present · Remote</span>
+              <p class="timeline-text">
+                Built full-stack site and authenticated client portal in Next.js, Supabase, and Tailwind for partner onboarding and program visibility.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Founder &amp; Developer — The Cutfish</h4>
+              <span>Oct 2025 — Present · Amherst, MA</span>
+              <p class="timeline-text">
+                Founded haircutting business with a custom Flask booking app — 20+ appointments in the first 2 weeks.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Data Intern — Techwards</h4>
+              <span>Jun 2023 — Aug 2024 · Remote</span>
+              <p class="timeline-text">
+                Backend dev and Python test cases for the Chatwards AI Chatbot, supporting reliable production releases.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">FINA World Junior Championships — Pakistan</h4>
+              <span>2019 · Budapest</span>
+              <p class="timeline-text">
+                Represented Pakistan at the 7th FINA World Junior Championships — international-level performance under pressure.
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="folder-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Projects</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Beats by Dre — Sentiment Analysis</h4>
+              <span>May 2025 — Jul 2025 · Remote</span>
+              <p class="timeline-text">
+                Built AI-enhanced dashboard analyzing sentiment trends across 30+ consumer data points from 50+ Amazon reviews across 5 Bluetooth speaker brands.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Lume — Wildfire Detection</h4>
+              <span>2025</span>
+              <p class="timeline-text">
+                Real-time fire and smoke detection in video streams using YOLOv8 and Roboflow — designed edge-case test suite and improved detection reliability through iterative debugging.
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python &amp; data</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Web development</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Machine learning</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Tools &amp; analytics</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </article>
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+          <ul class="project-list">
+
+            <li class="project-item active">
+              <a href="https://etg-portal.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <video class="project-video" autoplay muted loop playsinline preload="metadata" poster="./assets/images/campus.png">
+                    <source src="./assets/videos/etg-portal.mp4" type="video/mp4">
+                    <source src="./assets/videos/etg-portal.webm" type="video/webm">
+                  </video>
+                </figure>
+                <h3 class="project-title">Elevate The Game Portal</h3>
+                <p class="project-category">Next.js · Supabase · Tailwind</p>
+              </a>
+            </li>
+
+            <li class="project-item active">
+              <a href="https://thecutfishbarber.com/" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <video class="project-video" autoplay muted loop playsinline preload="metadata" poster="./assets/images/campus.png">
+                    <source src="./assets/videos/cutfish.mp4" type="video/mp4">
+                    <source src="./assets/videos/cutfish.webm" type="video/webm">
+                  </video>
+                </figure>
+                <h3 class="project-title">The Cutfish Barber</h3>
+                <p class="project-category">Flask · Booking system · Product site</p>
+              </a>
+            </li>
+
+            <li class="project-item active">
+              <a href="https://drive.google.com/file/d/1rs6iz70-h9CD6F3QBx3ocS5OqV5Ks4P9/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="play-outline"></ion-icon>
+                  </div>
+                  <video class="project-video" autoplay muted loop playsinline preload="metadata">
+                    <source src="./assets/videos/beats-demo.mp4?v=3" type="video/mp4">
+                    <source src="./assets/videos/beats-demo.webm?v=3" type="video/webm">
+                  </video>
+                </figure>
+                <h3 class="project-title">Beats by Dre — Sentiment Analysis</h3>
+                <p class="project-category">Python · Wireless speaker reviews · Notebook</p>
+              </a>
+            </li>
+
+            <li class="project-item active">
+              <a href="https://github.com/chaudharycoding/Lume" target="_blank" rel="noopener noreferrer">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </div>
+                  <video class="project-video" autoplay muted loop playsinline preload="metadata" poster="./assets/images/lume-demo.png">
+                    <source src="./assets/videos/lume-demo.mp4" type="video/mp4">
+                  </video>
+                </figure>
+                <h3 class="project-title">Lume — Wildfire Detection</h3>
+                <p class="project-category">Python · YOLOv8 · Roboflow</p>
+              </a>
+            </li>
+
+          </ul>
+        </section>
+
+      </article>
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Reach out via email or LinkedIn — I typically respond within a day.
+          </p>
+        </section>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://maps.google.com/maps?q=Amherst,+MA+01002&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="400" height="300" loading="lazy" title="Amherst, MA"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="mailto:humza.khaliq03@gmail.com" method="post" enctype="text/plain" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <script src="./assets/js/cursor-spotlight.js"></script>
+  <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

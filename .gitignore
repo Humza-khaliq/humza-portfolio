@@ -1,0 +1,9 @@
+.DS_Store
+.Rhistory
+.env
+.env.*
+.vercel
+
+node_modules/
+vcard-personal-portfolio/node_modules/
+vcard-personal-portfolio/assets/videos/_tmp_*/
