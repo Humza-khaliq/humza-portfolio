@@ -22,7 +22,7 @@ export function ProjectVideo({ project, className = "" }: { project: Project; cl
   }, []);
   if (!project.video) return null;
   return (
-    <video ref={ref} className={className} muted loop playsInline preload="metadata" aria-label={`${project.name} demo`}>
+    <video ref={ref} className={className} muted loop playsInline preload="metadata" poster={project.video.poster} aria-label={`${project.name} demo`}>
       {project.video.webm && <source src={project.video.webm} type="video/webm" />}
       <source src={project.video.mp4} type="video/mp4" />
     </video>
@@ -31,7 +31,7 @@ export function ProjectVideo({ project, className = "" }: { project: Project; cl
 
 /** Animated "listening" visual for JARVIS: wake word → waveform → reply. */
 export function JarvisVisual({ large = false }: { large?: boolean }) {
-  const bars = Array.from({ length: large ? 48 : 32 });
+  const bars = Array.from({ length: large ? 48 : 26 });
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center gap-5 overflow-hidden bg-[radial-gradient(60%_60%_at_50%_45%,rgba(120,200,255,.16),transparent_70%)]">
       <div className="relative grid place-items-center">
@@ -51,7 +51,7 @@ export function JarvisVisual({ large = false }: { large?: boolean }) {
           />
         ))}
       </div>
-      <p className="font-mono text-[11px] tracking-wide text-mute">
+      <p className={`font-mono text-[11px] tracking-wide text-mute ${large ? "" : "hidden"}`}>
         <span className="text-ice">“Hey Jarvis”</span> → whisper → llama 3.3 → elevenlabs
       </p>
     </div>

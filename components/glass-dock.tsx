@@ -131,7 +131,7 @@ export function GlassDock({ titles, current, onSelect }: Props) {
               width: "100%",
               height: "100%",
               borderRadius: 999,
-              background: "rgba(255,255,255,0.055)",
+              background: "rgba(10,16,26,0.62)",
             }}
             optics={{ frost: 6, dispersion: 0.35 }}
           >

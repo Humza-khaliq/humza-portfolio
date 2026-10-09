@@ -100,7 +100,7 @@ export type Project = {
   highlights: string[];
   stack: string[];
   links: { label: string; href: string }[];
-  video?: { mp4: string; webm?: string };
+  video?: { mp4: string; webm?: string; poster?: string };
   status?: string;
 };
 
@@ -237,7 +237,7 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "YOLOv8", "Roboflow", "Flask", "Seaborn"],
     links: [{ label: "GitHub", href: "https://github.com/chaudharycoding/Lume" }],
-    video: { mp4: "/videos/lume-demo.mp4" },
+    video: { mp4: "/videos/lume-demo.mp4", webm: "/videos/lume-demo.webm", poster: "/media/lume-demo.png" },
   },
 ];
 
