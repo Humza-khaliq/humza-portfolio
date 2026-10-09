@@ -52,7 +52,7 @@ export function Experience() {
   return (
     <section id="experience" className="relative px-5 py-28 sm:px-10 sm:py-36 lg:px-16">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel index="02">Experience</SectionLabel>
+        <SectionLabel index="01">Experience</SectionLabel>
 
         <ol ref={listRef} className="relative">
           {/* trunk: left on mobile, centred from md */}

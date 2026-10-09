@@ -251,7 +251,6 @@ export const skills: { label: string; items: string[] }[] = [
 
 export const sections = [
   { id: "home", label: "Home" },
-  { id: "about", label: "About" },
   { id: "experience", label: "Work" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },

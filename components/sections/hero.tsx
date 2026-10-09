@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { Glass } from "@samasante/liquid-glass";
 import { profile } from "@/lib/data";
@@ -17,22 +17,9 @@ export function Hero() {
   ];
 
   return (
-    <section id="home" className="relative flex min-h-[100svh] items-end px-5 pb-28 pt-28 sm:px-10 sm:pb-32 lg:px-16">
+    <section id="home" className="relative flex min-h-[100svh] items-center px-5 pb-24 pt-28 sm:px-10 lg:px-16">
       <div className="mx-auto w-full max-w-6xl">
         <div>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.1 }}
-            className="mb-6 flex items-center gap-2.5 font-mono text-xs text-mute"
-          >
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-              <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
-            </span>
-            {profile.role} · {profile.location}
-          </motion.p>
-
           <h1 className="font-display font-semibold text-[clamp(3.5rem,10vw,8.25rem)] leading-[0.92] tracking-[-0.045em] text-ink">
             {words.map((w, i) => (
               <motion.span
@@ -58,9 +45,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease, delay: 0.55 }}
-            className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-mute sm:text-xl"
+            className="mt-8 max-w-2xl text-pretty font-display text-[clamp(1.5rem,2.8vw,2.25rem)] font-medium leading-[1.2] tracking-[-0.02em] text-ink/90"
           >
-            {profile.tagline}
+            I like building things that have to <span className="text-ice">actually work</span>: robots, booking
+            systems, an assistant that talks back.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease, delay: 0.62 }}
+            className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-mute sm:text-lg"
+          >
+            UMass Amherst grad, BBA in Operations &amp; Information Management and BS in Informatics. I build full-stack
+            apps, voice AI and hardware.
           </motion.p>
 
           <motion.ul
@@ -89,16 +86,6 @@ export function Hero() {
 
       </div>
 
-      <motion.a
-        href="#about"
-        aria-label="Scroll to about"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.6, duration: 1 }}
-        className="absolute bottom-24 right-6 hidden items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-faint hover:text-mute sm:flex lg:right-16"
-      >
-        scroll <ArrowDown className="size-3.5 animate-bounce" />
-      </motion.a>
     </section>
   );
 }

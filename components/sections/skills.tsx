@@ -5,7 +5,7 @@ export function Skills() {
   return (
     <section id="skills" className="relative px-5 py-28 sm:px-10 sm:py-36 lg:px-16">
       <div className="mx-auto max-w-6xl">
-        <SectionLabel index="04">Toolkit</SectionLabel>
+        <SectionLabel index="03">Toolkit</SectionLabel>
         <Reveal className="glass divide-y divide-white/[0.07] px-5 sm:px-8">
           {skills.map((g) => (
             <div key={g.label} className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:gap-8">

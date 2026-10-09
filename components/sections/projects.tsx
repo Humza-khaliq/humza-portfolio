@@ -12,7 +12,7 @@ export function Projects() {
   return (
     <section id="projects" className="relative px-5 py-28 sm:px-10 sm:py-36 lg:px-16">
       <div className="mx-auto max-w-6xl">
-        <SectionLabel index="03">Projects</SectionLabel>
+        <SectionLabel index="02">Projects</SectionLabel>
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
             <motion.div

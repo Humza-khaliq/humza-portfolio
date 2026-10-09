@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section id="contact" className="relative px-5 pb-36 pt-28 sm:px-10 sm:pt-36 lg:px-16">
       <div className="mx-auto max-w-6xl">
-        <SectionLabel index="05">Contact</SectionLabel>
+        <SectionLabel index="04">Contact</SectionLabel>
         <Reveal>
           <h2 className="font-display font-semibold text-[clamp(2.8rem,8vw,6.5rem)] leading-[0.95] tracking-[-0.03em]">
             Let&apos;s build something
