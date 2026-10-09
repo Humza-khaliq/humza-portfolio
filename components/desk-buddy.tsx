@@ -115,7 +115,7 @@ export const DeskBuddy = forwardRef<OledEyesHandle, Props>(function DeskBuddy(
 
           {/* OLED face */}
           <div
-            className="absolute overflow-hidden bg-black"
+            className="absolute overflow-hidden bg-[#000]"
             style={{
               left: 26 * s,
               right: 26 * s,
@@ -151,21 +151,21 @@ export const DeskBuddy = forwardRef<OledEyesHandle, Props>(function DeskBuddy(
                 style={{ width: 6 * s, height: 6 * s }}
               />
             )}
-            <span className="font-pixel text-black/45" style={{ fontSize: 9 * s, letterSpacing: ".08em" }}>
+            <span className="font-pixel text-[rgba(0,0,0,.45)]" style={{ fontSize: 9 * s, letterSpacing: ".08em" }}>
               VOLT
             </span>
           </div>
           {/* speaker grille */}
           <div className="absolute grid grid-cols-4 gap-[3px]" style={{ right: 32 * s, top: 204 * s }}>
             {Array.from({ length: 8 }).map((_, i) => (
-              <span key={i} className="rounded-full bg-black/25" style={{ width: 4 * s, height: 4 * s }} />
+              <span key={i} className="rounded-full bg-[rgba(0,0,0,.25)]" style={{ width: 4 * s, height: 4 * s }} />
             ))}
           </div>
         </motion.div>
       </motion.div>
       {/* contact shadow */}
       <div
-        className="absolute left-1/2 -translate-x-1/2 rounded-[50%] bg-black/60 blur-xl"
+        className="absolute left-1/2 -translate-x-1/2 rounded-[50%] bg-[rgba(0,0,0,.6)] blur-xl"
         style={{ bottom: -18 * s, width: size * 0.8, height: 22 * s }}
       />
     </div>

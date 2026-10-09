@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { Glass } from "@samasante/liquid-glass";
 import { profile } from "@/lib/data";
@@ -14,6 +14,7 @@ export function Hero() {
     { href: `mailto:${profile.email}`, label: "Email", icon: Mail },
     { href: profile.linkedin, label: "LinkedIn", icon: LinkedinIcon },
     { href: profile.github, label: "GitHub", icon: GithubIcon },
+    { href: profile.resume, label: "Resume", icon: FileText },
   ];
 
   return (
@@ -68,9 +69,9 @@ export function Hero() {
           >
             {links.map(({ href, label, icon: Icon }) => (
               <li key={label}>
-                <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="group block">
+                <a href={href} target={href.startsWith("mailto") ? undefined : "_blank"} rel="noreferrer" className="group block">
                   <Glass
-                    style={{ borderRadius: 999, background: "rgba(18,21,28,0.9)" }}
+                    style={{ borderRadius: 999, background: "var(--pill-bg)" }}
                     className="text-sm text-ink/85 transition group-hover:text-white"
                   >
                     <span className="flex items-center gap-2 px-4 py-2.5">

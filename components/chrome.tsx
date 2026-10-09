@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Glass } from "@samasante/liquid-glass";
 import { GlassDock } from "./glass-dock";
-import { profile, sections } from "@/lib/data";
+import { ThemeToggle } from "./theme-toggle";
+import { sections } from "@/lib/data";
 
 /** Persistent UI that lives outside the transitioning route: top bar + glass dock. */
 export function Chrome() {
@@ -64,7 +65,7 @@ export function Chrome() {
         ) : (
           <Link href="/#projects" className="pointer-events-auto" aria-label="Back to all projects">
             <Glass
-              style={{ borderRadius: 999, background: "rgba(18,21,28,0.9)" }}
+              style={{ borderRadius: 999, background: "var(--pill-bg)" }}
               className="text-sm text-ink/90 transition hover:text-white"
             >
               <span className="flex items-center gap-1.5 px-4 py-2">
@@ -73,16 +74,7 @@ export function Chrome() {
             </Glass>
           </Link>
         )}
-        <a href={profile.resume} target="_blank" rel="noreferrer" className="pointer-events-auto">
-          <Glass
-            style={{ borderRadius: 999, background: "rgba(18,21,28,0.9)" }}
-            className="text-sm text-ink/90 transition hover:text-white"
-          >
-            <span className="flex items-center gap-1 px-4 py-2">
-              Resume <ArrowUpRight className="size-3.5" aria-hidden />
-            </span>
-          </Glass>
-        </a>
+        <ThemeToggle />
       </header>
       {isHome && <GlassDock titles={sections.map((s) => s.label)} current={current} onSelect={go} />}
     </>

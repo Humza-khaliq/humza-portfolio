@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Activity, Box, Brain, Code, Cpu, Layers, Terminal, TestTube, type LucideIcon } from "lucide-react";
+import { Box, Brain, ChartBar, Code, Cpu, Database, GitBranch, Layers, Sparkles, Terminal, TestTube, Workflow, type LucideIcon } from "lucide-react";
 import { Reveal, SectionLabel } from "@/components/reveal";
 import { skillGroups } from "@/lib/data";
 
@@ -12,7 +12,11 @@ const ICONS: Record<string, LucideIcon> = {
   layers: Layers,
   brain: Brain,
   test: TestTube,
-  activity: Activity,
+  chart: ChartBar,
+  database: Database,
+  workflow: Workflow,
+  git: GitBranch,
+  sparkles: Sparkles,
   box: Box,
 };
 

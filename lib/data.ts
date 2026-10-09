@@ -246,20 +246,29 @@ export type SkillGroup = { title: string; icon: string; cards: SkillCard[] };
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Software and AI",
+    title: "Software",
     icon: "terminal",
     cards: [
-      { title: "Languages", icon: "code", items: ["Python", "TypeScript", "JavaScript", "SQL", "Java", "R", "C++"] },
-      { title: "Full-stack", icon: "layers", items: ["Next.js", "React", "FastAPI", "Flask", "Supabase", "Postgres", "Tailwind", "Docker"] },
-      { title: "AI and Data", icon: "brain", items: ["LLM tool-calling", "RAG", "YOLOv8", "Whisper", "ChromaDB", "Pandas"] },
+      { title: "Languages", icon: "code", items: ["Python", "Java", "TypeScript", "JavaScript", "Go", "SQL", "HTML/CSS", "R", "C++"] },
+      { title: "Frameworks", icon: "layers", items: ["React", "Next.js", "Angular", "Node.js", "FastAPI", "Flask", "REST APIs", "Tailwind"] },
+      { title: "Databases and Cloud", icon: "database", items: ["Postgres", "SQL Server", "Supabase", "ChromaDB", "AWS", "Docker", "Vercel"] },
+    ],
+  },
+  {
+    title: "AI and Data",
+    icon: "sparkles",
+    cards: [
+      { title: "AI and Agents", icon: "brain", items: ["LLM workflows", "RAG pipelines", "AI agents", "Tool calling", "Whisper", "Claude Code", "Copilot"] },
+      { title: "Automation and ML", icon: "workflow", items: ["n8n", "YOLOv8", "Pandas", "Sentiment analysis", "EDA"] },
+      { title: "Observability and Dashboards", icon: "chart", items: ["Kibana", "Elasticsearch", "Tableau", "Power BI"] },
     ],
   },
   {
     title: "Quality and Hardware",
     icon: "cpu",
     cards: [
-      { title: "Testing and QA", icon: "test", items: ["Pytest", "Playwright", "Vitest", "Test design", "Defect triage", "Jira"] },
-      { title: "Observability and Dashboards", icon: "activity", items: ["Kibana", "Elasticsearch", "Tableau", "Power BI", "Git", "Linux / Bash", "Vercel"] },
+      { title: "Testing and QA", icon: "test", items: ["Pytest", "Playwright", "Vitest", "Unit & Integration Testing", "Test Automation", "Defect triage", "Jira"] },
+      { title: "DevOps and Practices", icon: "git", items: ["CI/CD", "Jenkins", "GitHub Actions", "Git", "Linux/Unix", "OOP", "Microservices", "Agile/Scrum", "Code Reviews", "Quality Engineering"] },
       { title: "Hardware and Fabrication", icon: "box", items: ["Arduino", "ESP32", "Raspberry Pi", "Sensors", "OLED", "Onshape", "Bambu Studio", "3D printing"] },
     ],
   },
