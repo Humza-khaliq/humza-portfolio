@@ -19,7 +19,7 @@
   --glass-bg: linear-gradient(160deg, rgba(20, 23, 30, 0.92), rgba(12, 14, 19, 0.9));
   --glass-edge: rgba(255, 255, 255, 0.16);
   --glass-shadow: rgba(0, 0, 0, 0.55);
-  --dot: rgba(255, 255, 255, 0.075);
+  --dot: rgba(255, 255, 255, 0.2);
 }
 
 /* light theme: swap the palette; white/black utilities invert so every component follows */
@@ -36,7 +36,7 @@
   --glass-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(250, 251, 253, 0.92));
   --glass-edge: rgba(14, 17, 23, 0.12);
   --glass-shadow: rgba(20, 30, 50, 0.12);
-  --dot: rgba(14, 17, 23, 0.12);
+  --dot: rgba(14, 17, 23, 0.26);
 }
 
 html {
@@ -95,7 +95,7 @@ em { font-style: normal; }
 }
 
 .bg-dots {
-  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-image: radial-gradient(var(--dot) 1.3px, transparent 1.6px);
 }
 
 html, body, .glass {
