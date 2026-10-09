@@ -3,72 +3,119 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { SectionLabel } from "@/components/reveal";
-import { experience } from "@/lib/data";
+import { experience, type Experience as Exp } from "@/lib/data";
+
+const ease = [0.22, 1, 0.36, 1] as const;
+
+function Card({ e }: { e: Exp }) {
+  return (
+    <div className="glass px-5 py-5 transition duration-500 hover:bg-white/[0.07] sm:px-6">
+      <h3 className="text-[17px] font-medium tracking-tight text-ink">{e.role}</h3>
+      <p className="font-serif text-xl italic text-ink/80">{e.company}</p>
+      <ul className="mt-3 space-y-1.5">
+        {e.bullets.map((b) => (
+          <li key={b} className="flex gap-2.5 text-[14px] leading-relaxed text-mute">
+            <span className="mt-[9px] size-1 shrink-0 rounded-full bg-ice/70" />
+            {b}
+          </li>
+        ))}
+      </ul>
+      {e.stack && (
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {e.stack.map((s) => (
+            <span key={s} className="rounded-full border border-white/10 px-2.5 py-0.5 font-mono text-[11px] text-ink/65">
+              {s}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Meta({ e, align }: { e: Exp; align: "left" | "right" }) {
+  return (
+    <div className={`pt-3 font-mono text-xs ${align === "right" ? "text-right" : "text-left"}`}>
+      <p className="text-ink/80">
+        {e.start} – {e.end}
+      </p>
+      <p className="mt-1 text-faint">{e.location}</p>
+    </div>
+  );
+}
 
 export function Experience() {
   const listRef = useRef<HTMLOListElement>(null);
-  const { scrollYProgress } = useScroll({ target: listRef, offset: ["start 75%", "end 55%"] });
+  const { scrollYProgress } = useScroll({ target: listRef, offset: ["start 70%", "end 60%"] });
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   return (
     <section id="experience" className="relative px-5 py-28 sm:px-10 sm:py-36 lg:px-16">
-      <div className="mx-auto max-w-6xl">
-        <SectionLabel index="02">Work</SectionLabel>
-        <ol ref={listRef} className="relative space-y-6 pl-9 sm:space-y-8 sm:pl-14">
-          {/* rail + scroll-linked fill */}
-          <div aria-hidden className="absolute bottom-3 left-[11px] top-3 w-px bg-white/10 sm:left-[19px]" />
+      <div className="mx-auto max-w-5xl">
+        <SectionLabel index="02">Experience</SectionLabel>
+
+        <ol ref={listRef} className="relative">
+          {/* trunk: left on mobile, centred from md */}
+          <div aria-hidden className="absolute bottom-0 left-[19px] top-0 w-px bg-white/10 md:left-1/2 md:-translate-x-1/2" />
           <motion.div
             aria-hidden
             style={{ scaleY: progress }}
-            className="absolute bottom-3 left-[11px] top-3 w-px origin-top bg-gradient-to-b from-ice via-ice/70 to-ice/0 sm:left-[19px]"
+            className="absolute bottom-0 left-[19px] top-0 w-px origin-top bg-gradient-to-b from-ice via-ice/60 to-ice/0 md:left-1/2 md:-translate-x-1/2"
           />
-          {experience.map((e, i) => (
-            <motion.li
-              key={e.company}
-              initial={{ opacity: 0, x: 40, filter: "blur(6px)" }}
-              whileInView={{ opacity: 1, x: 0, filter: "blur(0px)", transitionEnd: { filter: "none" } }}
-              viewport={{ once: true, margin: "0px 0px -15% 0px" }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
-              className="relative"
-            >
-              {/* node */}
-              <motion.span
-                aria-hidden
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true, margin: "0px 0px -15% 0px" }}
-                transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.15 }}
-                className={`absolute -left-9 top-6 grid size-[23px] place-items-center rounded-full border sm:-left-14 sm:size-[39px] ${
-                  i === 0 ? "border-ice/60 bg-ice/15 shadow-[0_0_24px_rgba(165,232,255,.45)]" : "border-white/15 bg-base/80"
-                }`}
-              >
-                <span className="hidden font-mono text-[11px] text-ink/80 sm:block">{e.mark}</span>
-                <span className="size-1.5 rounded-full bg-ice sm:hidden" />
-              </motion.span>
 
-              <div className="glass group px-5 py-5 transition duration-500 hover:bg-white/[0.07] sm:px-7 sm:py-6">
-                <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                  <h3 className="text-lg font-medium tracking-tight text-ink sm:text-xl">
-                    {e.role} <span className="text-mute">·</span>{" "}
-                    <span className="font-serif text-[1.35em] italic font-normal">{e.company}</span>
-                  </h3>
-                  <p className="font-mono text-xs text-mute">
-                    {e.start} – {e.end}
-                    {i === 0 && <span className="ml-2 rounded-full bg-emerald-400/15 px-2 py-0.5 text-emerald-300">now</span>}
-                  </p>
-                </div>
-                <p className="mt-2.5 max-w-3xl text-[15px] leading-relaxed text-mute">{e.line}</p>
-                <div className="mt-4 flex flex-wrap items-center gap-1.5">
-                  <span className="mr-2 font-mono text-[11px] text-faint">{e.location}</span>
-                  {e.stack?.map((s) => (
-                    <span key={s} className="rounded-full border border-white/10 px-2.5 py-0.5 font-mono text-[11px] text-ink/70">
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.li>
-          ))}
+          {experience.map((e, i) => {
+            const left = i % 2 === 0; // card side on desktop
+            return (
+              <li
+                key={e.company}
+                className="relative grid grid-cols-[40px_1fr] gap-x-4 pb-10 last:pb-0 md:grid-cols-[1fr_64px_1fr] md:gap-x-0 md:pb-14"
+              >
+                {/* node */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true, margin: "0px 0px -15% 0px" }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="col-start-1 row-start-1 flex justify-center md:col-start-2"
+                >
+                  <span
+                    className={`glass grid size-10 place-items-center rounded-full font-mono text-[10px] tracking-tight ${
+                      i === 0 ? "text-ice shadow-[0_0_28px_rgba(165,232,255,.45)] ring-1 ring-ice/50" : "text-ink/80"
+                    }`}
+                  >
+                    {e.mark}
+                  </span>
+                </motion.div>
+
+                {/* date + place: opposite the card on desktop, above it on mobile */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, margin: "0px 0px -15% 0px" }}
+                  transition={{ duration: 0.8, delay: 0.15 }}
+                  className={`col-start-2 row-start-1 md:row-start-1 md:px-6 ${left ? "md:col-start-3" : "md:col-start-1"}`}
+                >
+                  <div className="md:hidden">
+                    <Meta e={e} align="left" />
+                  </div>
+                  <div className="hidden md:block">
+                    <Meta e={e} align={left ? "left" : "right"} />
+                  </div>
+                </motion.div>
+
+                {/* card */}
+                <motion.div
+                  initial={{ opacity: 0, x: left ? -36 : 36, filter: "blur(6px)" }}
+                  whileInView={{ opacity: 1, x: 0, filter: "blur(0px)", transitionEnd: { filter: "none" } }}
+                  viewport={{ once: true, margin: "0px 0px -15% 0px" }}
+                  transition={{ duration: 0.8, ease }}
+                  className={`col-start-2 row-start-2 mt-3 md:row-start-1 md:mt-0 md:px-6 ${left ? "md:col-start-1" : "md:col-start-3"}`}
+                >
+                  <Card e={e} />
+                </motion.div>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </section>

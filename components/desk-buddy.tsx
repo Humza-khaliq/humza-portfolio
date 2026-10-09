@@ -18,7 +18,7 @@ type Props = {
 };
 
 /**
- * A little CSS-built model of ElectroBuddy: rounded two-piece shell, OLED face
+ * A little CSS-built model of Volt: rounded two-piece shell, OLED face
  * running the real RoboEyes behaviour, a camera on top and a capacitive touch
  * pad on its head.
  */
@@ -99,7 +99,7 @@ export const DeskBuddy = forwardRef<OledEyesHandle, Props>(function DeskBuddy(
           <button
             type="button"
             onClick={onTouch}
-            aria-label="Tap ElectroBuddy's touch sensor to change its mood"
+            aria-label="Tap Volt's touch sensor to change its mood"
             className="absolute z-10 cursor-pointer rounded-full transition-[box-shadow,transform] duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
             style={{
               right: 34 * s,
@@ -152,7 +152,7 @@ export const DeskBuddy = forwardRef<OledEyesHandle, Props>(function DeskBuddy(
               />
             )}
             <span className="font-pixel text-black/45" style={{ fontSize: 9 * s, letterSpacing: ".08em" }}>
-              ELECTROBUDDY
+              VOLT
             </span>
           </div>
           {/* speaker grille */}

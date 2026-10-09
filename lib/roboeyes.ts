@@ -1,5 +1,5 @@
 // A browser port of the behaviour of FluxGarage RoboEyes (the Arduino library
-// ElectroBuddy runs on its SSD1306 OLED). Draws on a 128×64 canvas so it can be
+// Volt runs on its SSD1306 OLED). Draws on a 128×64 canvas so it can be
 // scaled up with `image-rendering: pixelated` for an authentic OLED look.
 
 export type Mood = "default" | "happy" | "tired" | "angry";

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://humza-portfolio.vercel.app"),
   title: "Humza Khaliq",
   description:
-    "Software QA Co-op at Berkshire Grey. I build software, AI and hardware: JARVIS, ElectroBuddy, The Cutfish and more.",
+    "Software QA Co-op at Berkshire Grey. I build software, AI and hardware: JARVIS, Volt, The Cutfish and more.",
   openGraph: {
     title: "Humza Khaliq",
     description: "Software QA Co-op at Berkshire Grey. Software, AI and hardware that actually work.",

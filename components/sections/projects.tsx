@@ -3,25 +3,18 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { SectionLabel, Reveal } from "@/components/reveal";
-import { ElectroBuddyShowcase } from "@/components/electrobuddy-showcase";
-import { JarvisVisual, ProjectVideo } from "@/components/project-media";
+import { SectionLabel } from "@/components/reveal";
+import { JarvisVisual, ProjectVideo, VoltVisual } from "@/components/project-media";
 import { projects } from "@/lib/data";
 
 export function Projects() {
-  const featured = projects.find((p) => p.featured)!;
-  const rest = projects.filter((p) => !p.featured);
 
   return (
     <section id="projects" className="relative px-5 py-28 sm:px-10 sm:py-36 lg:px-16">
       <div className="mx-auto max-w-6xl">
         <SectionLabel index="03">Projects</SectionLabel>
-        <Reveal>
-          <ElectroBuddyShowcase project={featured} />
-        </Reveal>
-
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {rest.map((p, i) => (
+        <div className="grid gap-6 md:grid-cols-2">
+          {projects.map((p, i) => (
             <motion.div
               key={p.slug}
               initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
@@ -36,6 +29,8 @@ export function Projects() {
                 <div className="relative m-2 aspect-[16/10] overflow-hidden rounded-[22px] bg-black/40">
                   {p.slug === "jarvis" ? (
                     <JarvisVisual />
+                  ) : p.slug === "volt" ? (
+                    <VoltVisual />
                   ) : (
                     <ProjectVideo
                       project={p}

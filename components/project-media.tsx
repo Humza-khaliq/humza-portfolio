@@ -1,4 +1,5 @@
 "use client";
+import { OledEyes } from "./oled-eyes";
 
 import { useEffect, useRef } from "react";
 import type { Project } from "@/lib/data";
@@ -53,6 +54,21 @@ export function JarvisVisual({ large = false }: { large?: boolean }) {
       <p className="font-mono text-[11px] tracking-wide text-mute">
         <span className="text-ice">“Hey Jarvis”</span> → whisper → llama 3.3 → elevenlabs
       </p>
+    </div>
+  );
+}
+
+/** Volt's OLED face: the real RoboEyes port, glowing on a black screen. */
+export function VoltVisual() {
+  return (
+    <div className="relative grid h-full w-full place-items-center bg-[radial-gradient(55%_55%_at_50%_50%,rgba(120,200,255,.12),transparent_70%)]">
+      <div className="relative aspect-[2/1] w-[62%] overflow-hidden rounded-2xl bg-black shadow-[inset_0_0_0_3px_#0c0d10,0_20px_60px_-20px_rgba(0,0,0,.8)] ring-1 ring-white/10">
+        <div className="absolute inset-[9%] [filter:drop-shadow(0_0_4px_rgba(165,225,255,.75))_drop-shadow(0_0_14px_rgba(120,200,255,.35))]">
+          <OledEyes />
+        </div>
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(125deg,rgba(255,255,255,.1)_0%,transparent_40%)]" />
+      </div>
+      <p className="absolute bottom-4 font-mono text-[11px] tracking-wide text-mute">it&apos;s watching your cursor</p>
     </div>
   );
 }

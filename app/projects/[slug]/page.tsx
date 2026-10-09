@@ -57,27 +57,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* media */}
         <Reveal delay={0.12} className="mt-8">
-          {p.slug === "electrobuddy" ? (
-            <div className="grid gap-4 md:grid-cols-[1.4fr_1fr]">
-              <div className="glass overflow-hidden rounded-[28px]">
-                <BuddyStage />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {p.extraVideos?.map((src) => (
-                  <div key={src} className="glass overflow-hidden rounded-[22px] p-1.5">
-                    <video
-                      src={src}
-                      className="h-full w-full rounded-[17px] object-cover"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      poster="/media/electrobuddy-poster.jpg"
-                      aria-label="ElectroBuddy running on my desk"
-                    />
-                  </div>
-                ))}
-              </div>
+          {p.slug === "volt" ? (
+            <div className="glass overflow-hidden rounded-[28px]">
+              <BuddyStage />
             </div>
           ) : p.slug === "jarvis" ? (
             <div className="glass overflow-hidden rounded-[28px]">

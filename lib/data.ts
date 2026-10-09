@@ -17,7 +17,7 @@ export type Experience = {
   start: string;
   end: string;
   location: string;
-  line: string;
+  bullets: string[];
   stack?: string[];
 };
 
@@ -29,7 +29,10 @@ export const experience: Experience[] = [
     start: "Jul 2026",
     end: "Present",
     location: "Bedford, MA",
-    line: "Testing the software behind robotic sortation systems: test execution, defect triage and Python/Playwright automation.",
+    bullets: [
+      "Test the software behind Berkshire Grey's robotic sortation systems.",
+      "Run test execution and defect triage in Jira and Kibana, and automate checks with Python and Playwright.",
+    ],
     stack: ["Python", "Playwright", "Jira", "Kibana"],
   },
   {
@@ -39,7 +42,10 @@ export const experience: Experience[] = [
     start: "Apr 2026",
     end: "Present",
     location: "Remote",
-    line: "Built the full-stack site and authenticated client portal for partner onboarding and program visibility.",
+    bullets: [
+      "Built the full-stack site and client portal for partner onboarding, resources and program visibility.",
+      "Implemented authenticated client/admin workflows and validation-tested every flow.",
+    ],
     stack: ["Next.js", "Supabase", "Tailwind"],
   },
   {
@@ -49,7 +55,10 @@ export const experience: Experience[] = [
     start: "Oct 2025",
     end: "Present",
     location: "Amherst, MA",
-    line: "Started a haircutting business and built its booking app. 20+ appointments in the first 2 weeks.",
+    bullets: [
+      "Founded a haircutting business and built its booking app. 20+ appointments in the first 2 weeks.",
+      "Designed a responsive booking flow with automated tests to prevent scheduling conflicts.",
+    ],
     stack: ["Flask", "Python", "SQL"],
   },
   {
@@ -59,7 +68,10 @@ export const experience: Experience[] = [
     start: "May 2025",
     end: "Jul 2025",
     location: "Remote",
-    line: "Built an AI-enhanced dashboard tracking consumer sentiment across 30+ data points.",
+    bullets: [
+      "Ran qualitative and quantitative consumer insights analysis across 30+ data points.",
+      "Built an AI-enhanced dashboard to communicate sentiment trends.",
+    ],
     stack: ["Python", "Data viz"],
   },
   {
@@ -69,7 +81,10 @@ export const experience: Experience[] = [
     start: "Jun 2023",
     end: "Aug 2024",
     location: "Remote",
-    line: "Backend work and Python test cases for the Chatwards AI chatbot ahead of production releases.",
+    bullets: [
+      "Backend development and Python test cases for the Chatwards AI chatbot on Linux.",
+      "Joined code reviews and validation workflows supporting production releases.",
+    ],
     stack: ["Python", "Linux"],
   },
 ];
@@ -86,38 +101,10 @@ export type Project = {
   stack: string[];
   links: { label: string; href: string }[];
   video?: { mp4: string; webm?: string };
-  extraVideos?: string[];
-  featured?: boolean;
   status?: string;
 };
 
 export const projects: Project[] = [
-  {
-    slug: "electrobuddy",
-    name: "ElectroBuddy",
-    kicker: "Hardware · Embedded · Computer vision",
-    year: "2026",
-    role: "Solo build: hardware, firmware and enclosure",
-    status: "Live on my desk",
-    summary:
-      "A desk robot with OLED eyes that watches what I'm wiring, catches my mistakes, and talks me through the build.",
-    description: [
-      "ElectroBuddy started as an Arduino Uno driving a 128×64 OLED with animated robot eyes. It grew into a bench assistant: a camera tracks me and the parts on the desk, and a Raspberry Pi runs vision and speech so it can say when a component is wrong and what to do next.",
-      "A capacitive touch sensor on its head switches its mood. A temperature sensor keeps an eye on the bench, and the eyes follow me around the desk. It all sits in a rounded, 3D-printed two-piece enclosure wired without a breadboard.",
-    ],
-    highlights: [
-      "Animated OLED eyes (RoboEyes) with moods, blinking and idle glances",
-      "Camera tracking: the eyes follow my movement across the desk",
-      "Component recognition: identifies parts and flags wiring mistakes",
-      "Speech in and out on a Raspberry Pi for spoken guidance",
-      "Touch sensor to switch mood, temperature sensor on the bench",
-      "Custom 3D-printed two-piece enclosure",
-    ],
-    stack: ["Arduino (C++)", "Raspberry Pi", "Python", "OpenCV", "SSD1306 OLED", "Sensors", "3D printing"],
-    links: [],
-    extraVideos: ["/videos/electrobuddy-2.mp4", "/videos/electrobuddy-1.mp4"],
-    featured: true,
-  },
   {
     slug: "jarvis",
     name: "JARVIS",
@@ -139,6 +126,30 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "FastAPI", "Groq", "ChromaDB", "Whisper", "ElevenLabs"],
     links: [{ label: "GitHub", href: "https://github.com/Humza-khaliq" }],
+  },
+  {
+    slug: "volt",
+    name: "Volt",
+    kicker: "Hardware · Embedded · Computer vision",
+    year: "2026",
+    role: "Solo build: hardware, firmware and enclosure",
+    status: "Live on my desk",
+    summary:
+      "A desk robot with OLED eyes that watches what I'm wiring, catches my mistakes, and talks me through the build.",
+    description: [
+      "Volt started as an Arduino Uno driving a 128×64 OLED with animated robot eyes. It grew into a bench assistant: a camera tracks me and the parts on the desk, and a Raspberry Pi runs vision and speech so it can say when a component is wrong and what to do next.",
+      "A touch sensor on its head switches its mood, a temperature sensor keeps an eye on the bench, and the eyes follow me around the desk. It all sits in a rounded, 3D-printed two-piece enclosure.",
+    ],
+    highlights: [
+      "Animated OLED eyes (RoboEyes) with moods, blinking and idle glances",
+      "Camera tracking: the eyes follow my movement across the desk",
+      "Component recognition: identifies parts and flags wiring mistakes",
+      "Speech in and out on a Raspberry Pi for spoken guidance",
+      "Touch sensor to switch mood, temperature sensor on the bench",
+      "Custom 3D-printed two-piece enclosure",
+    ],
+    stack: ["Arduino (C++)", "Raspberry Pi", "Python", "OpenCV", "SSD1306 OLED", "Sensors", "3D printing"],
+    links: [],
   },
   {
     slug: "elevate-the-game",

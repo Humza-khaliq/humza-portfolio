@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowDown, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { Glass } from "@samasante/liquid-glass";
-import { DeskBuddy } from "@/components/desk-buddy";
 import { profile } from "@/lib/data";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -19,7 +18,7 @@ export function Hero() {
 
   return (
     <section id="home" className="relative flex min-h-[100svh] items-end px-5 pb-28 pt-28 sm:px-10 sm:pb-32 lg:px-16">
-      <div className="mx-auto grid w-full max-w-6xl items-end gap-12 lg:grid-cols-[1fr_auto]">
+      <div className="mx-auto w-full max-w-6xl">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -88,26 +87,6 @@ export function Hero() {
           </motion.ul>
         </div>
 
-        {/* mini ElectroBuddy */}
-        <motion.div
-          initial={{ opacity: 0, y: 40, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.2, ease, delay: 0.9 }}
-          className="relative hidden justify-self-end lg:block"
-        >
-          <motion.a
-            href="#projects"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease, delay: 2 }}
-            className="glass absolute -left-40 top-2 z-10 block rounded-2xl rounded-br-sm px-4 py-2.5 text-[13px] leading-snug text-ink/90 hover:text-white"
-          >
-            hi, I&apos;m ElectroBuddy.
-            <br />
-            <span className="text-mute">I live in the projects ↓</span>
-          </motion.a>
-          <DeskBuddy size={210} mood="happy" />
-        </motion.div>
       </div>
 
       <motion.a
