@@ -70,7 +70,7 @@ export function Hero() {
               <li key={label}>
                 <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="group block">
                   <Glass
-                    style={{ borderRadius: 999, background: "rgba(10,16,26,0.62)" }}
+                    style={{ borderRadius: 999, background: "rgba(18,21,28,0.9)" }}
                     className="text-sm text-ink/85 transition group-hover:text-white"
                   >
                     <span className="flex items-center gap-2 px-4 py-2.5">

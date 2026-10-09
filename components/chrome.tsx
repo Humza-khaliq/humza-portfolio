@@ -64,7 +64,7 @@ export function Chrome() {
         ) : (
           <Link href="/#projects" className="pointer-events-auto" aria-label="Back to all projects">
             <Glass
-              style={{ borderRadius: 999, background: "rgba(10,16,26,0.62)" }}
+              style={{ borderRadius: 999, background: "rgba(18,21,28,0.9)" }}
               className="text-sm text-ink/90 transition hover:text-white"
             >
               <span className="flex items-center gap-1.5 px-4 py-2">
@@ -75,7 +75,7 @@ export function Chrome() {
         )}
         <a href={profile.resume} target="_blank" rel="noreferrer" className="pointer-events-auto">
           <Glass
-            style={{ borderRadius: 999, background: "rgba(10,16,26,0.62)" }}
+            style={{ borderRadius: 999, background: "rgba(18,21,28,0.9)" }}
             className="text-sm text-ink/90 transition hover:text-white"
           >
             <span className="flex items-center gap-1 px-4 py-2">

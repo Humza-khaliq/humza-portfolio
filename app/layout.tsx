@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Humza Khaliq",
     description: "Software QA Co-op at Berkshire Grey. Software, AI and hardware that actually work.",
-    images: ["/media/wallpaper-sm.jpg"],
+    images: [],
   },
 };
 

@@ -1,14 +1,10 @@
-/** Fixed wallpaper behind everything, dimmed so glass and text stay legible. */
+/** Dark, minimal background: faint dot grid + two slow-drifting glows. */
 export function Background() {
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      <picture>
-        <source media="(max-width: 768px)" srcSet="/media/wallpaper-sm.jpg" />
-        <img src="/media/wallpaper.jpg" alt="" className="h-full w-full object-cover object-center" />
-      </picture>
-      <div className="absolute inset-0 bg-[rgba(3,8,14,.35)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,8,14,.55)_0%,rgba(3,8,14,.25)_45%,rgba(3,8,14,.1)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,8,15,0)_55%,rgba(5,8,15,.6)_100%)]" />
+    <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-base">
+      <div className="bg-glow bg-glow-a" />
+      <div className="bg-glow bg-glow-b" />
+      <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.075)_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(120%_90%_at_50%_40%,#000_40%,transparent_100%)]" />
     </div>
   );
 }

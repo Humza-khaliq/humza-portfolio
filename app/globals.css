@@ -7,10 +7,10 @@
   --font-pixel: var(--font-geist-pixel-square), var(--font-geist-mono), monospace;
 
   --color-ink: #f2f4f8;
-  --color-mute: #cdd4df;
-  --color-faint: #9aa3b2;
+  --color-mute: #d9dee7;
+  --color-faint: #aab2bf;
   --color-ice: #8fdcff;
-  --color-base: #03080e;
+  --color-base: #050608;
 }
 
 :root {
@@ -29,7 +29,6 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55);
 }
 
 em { font-style: normal; }
@@ -43,13 +42,13 @@ em { font-style: normal; }
 @layer components {
 .glass {
   position: relative;
-  background: linear-gradient(160deg, rgba(16, 24, 38, 0.78), rgba(8, 13, 22, 0.7));
+  background: linear-gradient(160deg, rgba(20, 23, 30, 0.92), rgba(12, 14, 19, 0.9));
   -webkit-backdrop-filter: blur(28px) saturate(180%);
   backdrop-filter: blur(28px) saturate(180%);
   border-radius: 26px;
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.22),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.16),
     0 24px 60px -24px rgba(0, 0, 0, 0.55);
 }
 .glass::after {
@@ -101,3 +100,36 @@ em { font-style: normal; }
 }
 
 .bg-ink, .bg-white, .text-black, .text-black * { text-shadow: none; }
+
+/* background glows: slow, subtle drift */
+.bg-glow {
+  position: absolute;
+  width: 55vmax;
+  height: 55vmax;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.16;
+  will-change: transform;
+}
+.bg-glow-a {
+  top: -20vmax;
+  right: -15vmax;
+  background: #2f7fff;
+  animation: drift-a 26s ease-in-out infinite alternate;
+}
+.bg-glow-b {
+  bottom: -25vmax;
+  left: -20vmax;
+  background: #19b8c9;
+  opacity: 0.11;
+  animation: drift-b 32s ease-in-out infinite alternate;
+}
+@keyframes drift-a {
+  to { transform: translate(-18vw, 22vh) scale(1.15); }
+}
+@keyframes drift-b {
+  to { transform: translate(22vw, -18vh) scale(0.9); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-glow { animation: none; }
+}
