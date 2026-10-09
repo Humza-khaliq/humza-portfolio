@@ -241,12 +241,28 @@ export const projects: Project[] = [
   },
 ];
 
-export const skills: { label: string; items: string[] }[] = [
-  { label: "Languages", items: ["Python", "TypeScript", "JavaScript", "SQL", "Java", "R", "C++"] },
-  { label: "Build", items: ["Next.js", "React", "FastAPI", "Flask", "Supabase", "Postgres", "Tailwind"] },
-  { label: "AI & Data", items: ["LLM tool-calling", "RAG", "YOLOv8", "Whisper", "ChromaDB", "Pandas"] },
-  { label: "Quality", items: ["Playwright", "Vitest", "Test design", "Defect triage", "Jira", "Kibana"] },
-  { label: "Hardware", items: ["Arduino", "Raspberry Pi", "Sensors", "OLED", "3D printing"] },
+export type SkillCard = { title: string; icon: string; items: string[] };
+export type SkillGroup = { title: string; icon: string; cards: SkillCard[] };
+
+export const skillGroups: SkillGroup[] = [
+  {
+    title: "Software and AI",
+    icon: "terminal",
+    cards: [
+      { title: "Languages", icon: "code", items: ["Python", "TypeScript", "JavaScript", "SQL", "Java", "R", "C++"] },
+      { title: "Full-stack", icon: "layers", items: ["Next.js", "React", "FastAPI", "Flask", "Supabase", "Postgres", "Tailwind", "Docker"] },
+      { title: "AI and Data", icon: "brain", items: ["LLM tool-calling", "RAG", "YOLOv8", "Whisper", "ChromaDB", "Pandas"] },
+    ],
+  },
+  {
+    title: "Quality and Hardware",
+    icon: "cpu",
+    cards: [
+      { title: "Testing and QA", icon: "test", items: ["Pytest", "Playwright", "Vitest", "Test design", "Defect triage", "Jira"] },
+      { title: "Observability and Tools", icon: "activity", items: ["Kibana", "Elasticsearch", "Git", "Linux / Bash", "Vercel"] },
+      { title: "Hardware and Fabrication", icon: "box", items: ["Arduino", "ESP32", "Raspberry Pi", "Sensors", "OLED", "Onshape", "Bambu Studio", "3D printing"] },
+    ],
+  },
 ];
 
 export const sections = [
