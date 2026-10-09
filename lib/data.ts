@@ -251,7 +251,7 @@ export const skillGroups: SkillGroup[] = [
     cards: [
       { title: "Languages", icon: "code", items: ["Python", "TypeScript", "JavaScript", "SQL", "Java", "R", "C++"] },
       { title: "Full-stack", icon: "layers", items: ["Next.js", "React", "FastAPI", "Flask", "Supabase", "Postgres", "Tailwind", "Docker"] },
-      { title: "AI and Data", icon: "brain", items: ["LLM tool-calling", "RAG", "YOLOv8", "Whisper", "ChromaDB", "Pandas"] },
+      { title: "AI and Data", icon: "brain", items: ["LLM tool-calling", "RAG", "YOLOv8", "Whisper", "ChromaDB", "Pandas", "Tableau", "Power BI"] },
     ],
   },
   {
