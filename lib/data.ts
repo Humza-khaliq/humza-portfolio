@@ -251,7 +251,7 @@ export const skillGroups: SkillGroup[] = [
     cards: [
       { title: "Languages", icon: "code", items: ["Python", "TypeScript", "JavaScript", "SQL", "Java", "R", "C++"] },
       { title: "Full-stack", icon: "layers", items: ["Next.js", "React", "FastAPI", "Flask", "Supabase", "Postgres", "Tailwind", "Docker"] },
-      { title: "AI and Data", icon: "brain", items: ["LLM tool-calling", "RAG", "YOLOv8", "Whisper", "ChromaDB", "Pandas", "Tableau", "Power BI"] },
+      { title: "AI and Data", icon: "brain", items: ["LLM tool-calling", "RAG", "YOLOv8", "Whisper", "ChromaDB", "Pandas"] },
     ],
   },
   {
@@ -259,7 +259,7 @@ export const skillGroups: SkillGroup[] = [
     icon: "cpu",
     cards: [
       { title: "Testing and QA", icon: "test", items: ["Pytest", "Playwright", "Vitest", "Test design", "Defect triage", "Jira"] },
-      { title: "Observability and Tools", icon: "activity", items: ["Kibana", "Elasticsearch", "Git", "Linux / Bash", "Vercel"] },
+      { title: "Observability and Dashboards", icon: "activity", items: ["Kibana", "Elasticsearch", "Tableau", "Power BI", "Git", "Linux / Bash", "Vercel"] },
       { title: "Hardware and Fabrication", icon: "box", items: ["Arduino", "ESP32", "Raspberry Pi", "Sensors", "OLED", "Onshape", "Bambu Studio", "3D printing"] },
     ],
   },
