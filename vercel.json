@@ -1,7 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "",
-  "buildCommand": "",
-  "outputDirectory": "vcard-personal-portfolio",
-  "framework": null
+  "framework": "nextjs",
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm build"
 }

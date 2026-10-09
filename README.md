@@ -1,15 +1,17 @@
 # Humza Khaliq — Portfolio
 
-Personal portfolio site (static HTML/CSS/JS), customized from the [vCard template](https://github.com/codewithsadee/vcard-personal-portfolio).
+Next.js 15 (App Router) + Tailwind v4. Liquid-glass UI over a looping video background.
 
-## Local development
+- **Glass:** [`@samasante/liquid-glass`](https://www.npmjs.com/package/@samasante/liquid-glass) for pills, dock and nav; `.glass` CSS for cards.
+- **Dock:** `components/glass-dock.tsx`, a web port of the SwiftUI `LiquidGlassLinkPicker` (hover to preview, scrub on touch, arrow keys).
+- **Page transitions:** [`@ssgoi/react`](https://ssgoi.dev) `drill()` between `/` and `/projects/[slug]`.
+- **ElectroBuddy:** `lib/roboeyes.ts` is a browser port of FluxGarage RoboEyes on a 128×64 canvas; `components/desk-buddy.tsx` is the CSS model of the enclosure.
+- **Content:** everything lives in `lib/data.ts`.
 
 ```bash
-npm run dev
+pnpm install
+pnpm dev     # http://localhost:3000
+pnpm build
 ```
 
-Opens at [http://localhost:3456](http://localhost:3456).
-
-## Deploy
-
-Connected to [Vercel](https://vercel.com). Production deploys from `main`.
+Deploys to Vercel from `main`.

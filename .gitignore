@@ -1,9 +1,7 @@
-.DS_Store
-.Rhistory
-.env
-.env.*
+node_modules
+.next
+out
 .vercel
-
-node_modules/
-vcard-personal-portfolio/node_modules/
-vcard-personal-portfolio/assets/videos/_tmp_*/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
