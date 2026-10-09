@@ -33,7 +33,7 @@ export function Hero() {
             {profile.role} · {profile.location}
           </motion.p>
 
-          <h1 className="font-serif text-[clamp(4rem,13vw,10.5rem)] leading-[0.86] tracking-[-0.035em] text-ink">
+          <h1 className="font-display font-semibold text-[clamp(3.5rem,10vw,8.25rem)] leading-[0.92] tracking-[-0.045em] text-ink">
             {words.map((w, i) => (
               <motion.span
                 key={w}
@@ -44,7 +44,7 @@ export function Hero() {
               >
                 {i === words.length - 1 ? (
                   <>
-                    <em className="italic">{w}</em>
+                    {w}
                     <span className="text-ice">.</span>
                   </>
                 ) : (

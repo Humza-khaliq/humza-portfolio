@@ -1,37 +1,13 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-
-/** Full-bleed looping video behind everything, with a soft vignette for legibility. */
+/** Fixed wallpaper behind everything, dimmed so glass and text stay legible. */
 export function Background() {
-  const ref = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const v = ref.current;
-    if (!v) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      v.pause();
-      return;
-    }
-    v.play().catch(() => {});
-  }, []);
-
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      <video
-        ref={ref}
-        className="h-full w-full scale-[1.04] object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/media/bg-poster.jpg"
-      >
-        <source src="/media/bg.webm" type="video/webm" />
-        <source src="/media/bg.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_20%,transparent_0%,rgba(7,8,10,.35)_60%,rgba(7,8,10,.85)_100%)]" />
+      <picture>
+        <source media="(max-width: 768px)" srcSet="/media/wallpaper-sm.jpg" />
+        <img src="/media/wallpaper.jpg" alt="" className="h-full w-full object-cover object-[30%_50%]" />
+      </picture>
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,8,15,.82)_0%,rgba(5,8,15,.55)_45%,rgba(5,8,15,.35)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,8,15,0)_55%,rgba(5,8,15,.6)_100%)]" />
     </div>
   );
 }

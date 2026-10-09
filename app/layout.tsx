@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Humza Khaliq",
     description: "Software QA Co-op at Berkshire Grey. Software, AI and hardware that actually work.",
-    images: ["/media/bg-poster.jpg"],
+    images: ["/media/wallpaper-sm.jpg"],
   },
 };
 
@@ -39,7 +39,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <Background />
-        <div className="grain" aria-hidden />
         <main id="main" className="relative z-10 min-h-dvh overflow-x-clip">
           <SsgoiProvider>
             <SsgoiRouteBoundary>{children}</SsgoiRouteBoundary>

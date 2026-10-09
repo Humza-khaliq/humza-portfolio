@@ -13,7 +13,7 @@ export function About() {
         <SectionLabel index="01">About</SectionLabel>
         <div className="grid gap-12 lg:grid-cols-[1.25fr_1fr] lg:gap-20">
           <Reveal>
-            <p className="font-serif text-[clamp(2rem,4.4vw,3.6rem)] leading-[1.04] tracking-[-0.02em] text-ink">
+            <p className="font-display font-medium text-[clamp(1.9rem,4vw,3.25rem)] leading-[1.1] tracking-[-0.03em] text-ink">
               I like building things that have to <em className="text-ice">actually work</em>: robots, booking
               systems, an assistant that talks back.
             </p>

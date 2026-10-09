@@ -9,7 +9,7 @@ export function Contact() {
       <div className="mx-auto max-w-6xl">
         <SectionLabel index="05">Contact</SectionLabel>
         <Reveal>
-          <h2 className="font-serif text-[clamp(2.8rem,8vw,6.5rem)] leading-[0.95] tracking-[-0.03em]">
+          <h2 className="font-display font-semibold text-[clamp(2.8rem,8vw,6.5rem)] leading-[0.95] tracking-[-0.03em]">
             Let&apos;s build something
             <br />
             <em className="text-ice">that works.</em>

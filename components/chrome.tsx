@@ -56,7 +56,7 @@ export function Chrome() {
           <button
             type="button"
             onClick={() => go(0)}
-            className="pointer-events-auto font-serif text-2xl italic leading-none tracking-tight text-ink/90 transition hover:text-white"
+            className="pointer-events-auto font-display font-semibold text-2xl leading-none tracking-tight text-ink/90 transition hover:text-white"
             aria-label="Back to top"
           >
             hk.

@@ -11,7 +11,7 @@ function Card({ e }: { e: Exp }) {
   return (
     <div className="glass px-5 py-5 transition duration-500 hover:bg-white/[0.07] sm:px-6">
       <h3 className="text-[17px] font-medium tracking-tight text-ink">{e.role}</h3>
-      <p className="font-serif text-xl italic text-ink/80">{e.company}</p>
+      <p className="mt-0.5 text-[15px] text-mute">{e.company}</p>
       <ul className="mt-3 space-y-1.5">
         {e.bullets.map((b) => (
           <li key={b} className="flex gap-2.5 text-[14px] leading-relaxed text-mute">

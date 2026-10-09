@@ -38,7 +38,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ice/80">{p.kicker}</p>
-          <h1 className="mt-4 font-serif text-[clamp(3rem,9vw,7rem)] leading-[0.9] tracking-[-0.035em]">{p.name}</h1>
+          <h1 className="mt-4 font-display font-semibold text-[clamp(3rem,9vw,7rem)] leading-[0.9] tracking-[-0.035em]">{p.name}</h1>
           <p className="mt-6 max-w-2xl text-pretty text-xl leading-relaxed text-mute">{p.summary}</p>
         </Reveal>
 
@@ -132,7 +132,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <Link href={`/projects/${next.slug}`} className="group flex items-end justify-between gap-6">
             <span>
               <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-faint">Next project</span>
-              <span className="mt-2 block font-serif text-4xl tracking-tight text-ink transition group-hover:text-white sm:text-5xl">
+              <span className="mt-2 block font-display font-semibold text-4xl tracking-tight text-ink transition group-hover:text-white sm:text-5xl">
                 {next.name}
               </span>
             </span>
