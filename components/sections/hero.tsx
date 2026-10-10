@@ -57,7 +57,7 @@ export function Hero() {
             transition={{ duration: 0.9, ease, delay: 0.62 }}
             className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-mute sm:text-lg"
           >
-            UMass Amherst grad, BBA in Operations &amp; Information Management and BS in Informatics. I build full-stack
+            UMass Amherst grad, BS in Data Science and BBA in Operations &amp; Information Management (Dean&apos;s List). I build full-stack
             apps, voice AI and hardware.
           </motion.p>
 

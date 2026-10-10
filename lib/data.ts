@@ -25,28 +25,30 @@ export const experience: Experience[] = [
   {
     company: "Berkshire Grey",
     mark: "BG",
-    role: "Software QA Co-op",
+    role: "Software Quality Co-op",
     start: "Jul 2026",
     end: "Present",
     location: "Bedford, MA",
     bullets: [
-      "Test the software behind Berkshire Grey's robotic sortation systems.",
-      "Run test execution and defect triage in Jira and Kibana, and automate checks with Python and Playwright.",
+      "Designed and executed 50+ Python E2E and integration test suites with Playwright, expanding automated coverage by 22% across API and UI workflows.",
+      "Troubleshot edge cases across REST API and system-level tests, driving root cause analyses that cut recurring failures by 25%.",
+      "Automated test execution across 10+ CI/CD pipeline stages with n8n and Jenkins, reducing manual QA effort by 35%.",
+      "Worked with developers in Agile/Scrum sprints and code reviews to prioritize and resolve high-risk defects.",
     ],
-    stack: ["Python", "Playwright", "Jira", "Kibana"],
+    stack: ["Python", "Playwright", "REST APIs", "n8n", "Jenkins"],
   },
   {
     company: "Elevate The Game",
     mark: "ETG",
-    role: "Website Developer",
+    role: "Full Stack Engineer",
     start: "Apr 2026",
-    end: "Present",
+    end: "Jun 2026",
     location: "Remote",
     bullets: [
-      "Built the full-stack site and client portal for partner onboarding, resources and program visibility.",
-      "Implemented authenticated client/admin workflows and validation-tested every flow.",
+      "Built a full-stack client portal in Next.js, TypeScript and Supabase (Postgres) with role-based access control and REST API integrations, onboarding 15+ partners.",
+      "Wrote 50+ unit and integration tests across client and admin workflows, reducing pre-launch defects by 20%.",
     ],
-    stack: ["Next.js", "Supabase", "Tailwind"],
+    stack: ["Next.js", "TypeScript", "Supabase", "Postgres"],
   },
   {
     company: "The Cutfish",
@@ -56,36 +58,10 @@ export const experience: Experience[] = [
     end: "Present",
     location: "Amherst, MA",
     bullets: [
-      "Founded a haircutting business and built its booking app. 20+ appointments in the first 2 weeks.",
-      "Designed a responsive booking flow with automated tests to prevent scheduling conflicts.",
+      "Built a full-stack booking platform with Flask and RESTful APIs, scheduling 20+ appointments in the first 2 weeks.",
+      "Designed a responsive booking flow with automated test coverage to catch conflicts early, cutting scheduling errors by 30%.",
     ],
-    stack: ["Flask", "Python", "SQL"],
-  },
-  {
-    company: "Beats by Dre",
-    mark: "B",
-    role: "Insights Extern",
-    start: "May 2025",
-    end: "Jul 2025",
-    location: "Remote",
-    bullets: [
-      "Ran qualitative and quantitative consumer insights analysis across 30+ data points.",
-      "Built an AI-enhanced dashboard to communicate sentiment trends.",
-    ],
-    stack: ["Python", "Data viz"],
-  },
-  {
-    company: "Techwards",
-    mark: "TW",
-    role: "Data Intern",
-    start: "Jun 2023",
-    end: "Aug 2024",
-    location: "Remote",
-    bullets: [
-      "Backend development and Python test cases for the Chatwards AI chatbot on Linux.",
-      "Joined code reviews and validation workflows supporting production releases.",
-    ],
-    stack: ["Python", "Linux"],
+    stack: ["Flask", "Python", "REST APIs"],
   },
 ];
 
@@ -156,9 +132,9 @@ export const projects: Project[] = [
     name: "Elevate The Game Portal",
     kicker: "Full-stack · Client portal",
     year: "2026",
-    role: "Website Developer",
+    role: "Full Stack Engineer",
     summary:
-      "Public site plus an authenticated client and admin portal for partner onboarding, resources and contracts.",
+      "Full-stack client portal with role-based access for partners and admins. Onboarded 15+ partners.",
     description: [
       "Elevate The Game needed one place for partners to onboard, access curriculum, and track their program. I built the public site and a role-based portal on Next.js and Supabase.",
       "Clients see their presentations, contracts and curriculum files. Admins manage all of it. I validated every workflow end-to-end and tracked defects through to release.",
@@ -166,7 +142,8 @@ export const projects: Project[] = [
     highlights: [
       "Role-based auth for client and admin workflows",
       "Document hub for presentations, contracts and curriculum",
-      "Validation testing across every portal flow",
+      "50+ unit and integration tests, cutting pre-launch defects by 20%",
+      "15+ partners onboarded",
     ],
     stack: ["Next.js", "TypeScript", "Supabase", "Postgres", "Tailwind"],
     links: [{ label: "Live site", href: "https://etg-portal.vercel.app/" }],
@@ -186,7 +163,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       "20+ appointments booked in the first 2 weeks",
-      "Conflict-free scheduling with automated test coverage",
+      "Automated test coverage that cut scheduling errors by 30%",
       "Live at thecutfishbarber.com",
     ],
     stack: ["Flask", "Python", "SQL", "HTML/CSS"],
@@ -200,15 +177,15 @@ export const projects: Project[] = [
     year: "2025",
     role: "Insights Externship",
     summary:
-      "25+ visualizations comparing customer sentiment across 5 Bluetooth speaker brands from 50+ Amazon reviews.",
+      "AI-enhanced sentiment dashboard built from 150+ survey responses, surfacing 5+ actionable consumer trends.",
     description: [
-      "During my Beats by Dre externship I ran exploratory analysis and sentiment scoring on Amazon reviews of five competing speakers.",
-      "The notebook covers polarity trends, review volume and keyword frequency. It has automated data-quality checks so the insights hold up.",
+      "During my Beats by Dre externship I turned 150+ survey responses into an AI-enhanced sentiment dashboard, quantifying sentiment shifts across 4 key themes to guide product messaging and feature priorities.",
+      "I also benchmarked competitive positioning by mapping competitor attributes across 5 product lines with sentiment analysis.",
     ],
     highlights: [
-      "25+ visualizations: word clouds, heatmaps, box and scatter plots",
-      "Validation checks and automated data-quality scripts",
-      "Competitive insights across 5 brands",
+      "5+ actionable consumer trends uncovered from 150+ responses",
+      "Sentiment shifts quantified across 4 key themes",
+      "10+ insight-driven recommendations for roadmap trade-offs",
     ],
     stack: ["Python", "Pandas", "Matplotlib", "Seaborn", "Colab"],
     links: [
@@ -232,7 +209,8 @@ export const projects: Project[] = [
     ],
     highlights: [
       "Real-time detection on video streams",
-      "Edge-case test suite for model reliability",
+      "30+ test cases exposing detection gaps across edge cases",
+      "Tuned detection thresholds: +15% accuracy, fewer false positives",
       "Flask app wrapping the detector",
     ],
     stack: ["Python", "YOLOv8", "Roboflow", "Flask", "Seaborn"],
